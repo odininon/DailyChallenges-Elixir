@@ -24,7 +24,7 @@ defmodule Exercise321E.Mixfile do
   defp deps do
     [
       {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
-      {:excoveralls, "~> 0.7", only: :test},
+      {:excoveralls, "~> 0.7", only: :test, runtime: false},
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
