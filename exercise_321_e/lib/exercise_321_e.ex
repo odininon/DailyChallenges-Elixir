@@ -3,6 +3,26 @@ defmodule Exercise321E do
   Documentation for Exercise321E.
   """
 
+  def speak_current_time do
+    {{_, _, _}, {h, m, _}} = :calendar.local_time()
+
+    hours(h) <> ":" <> minutes(m)
+    |> speak
+    |> IO.puts
+  end
+
+  def hours(i) do 
+    s = Integer.to_string(i)
+    case String.split(s, "") do
+      [_, _] -> "0" <> s
+      [_, _, _] -> s
+    end
+  end
+
+  def minutes(i) do
+    Integer.to_string(i)
+  end
+
   def speak(time) do
     case String.split(time, ":") do
       [h, m] -> String.replace("It's " <> speak_hour(h) <> " " <> speak_minute(m) <> " " <> period(h) , "  ", " ")
