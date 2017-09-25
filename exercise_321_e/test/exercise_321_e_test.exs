@@ -9,6 +9,11 @@ defmodule Exercise321ETest do
     assert Exercise321E.speak("14:01") == "It's two oh one pm"
     assert Exercise321E.speak("20:29") == "It's eight twenty nine pm"
     assert Exercise321E.speak("21:00") == "It's nine pm"
+    assert Exercise321E.speak("21:10") == "It's nine ten pm"
+    assert Exercise321E.speak("21:13") == "It's nine thirteen pm"
+    assert Exercise321E.speak("21:18") == "It's nine eighteen pm"
+
+
   end
 
   test "speaks the hour" do

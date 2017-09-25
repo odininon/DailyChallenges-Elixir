@@ -13,6 +13,15 @@ defmodule Exercise321E do
     case String.split(minute, "") do 
       ["0", "0", _] -> ""
       ["0", o, _] -> "oh " <> one_to_ten(o)
+      ["1", "1", _] -> "eleven"
+      ["1", "2", _] -> "twelve"
+      ["1", "3", _] -> "thirteen"
+      ["1", "4", _] -> "fourteen"
+      ["1", "5", _] -> "fifteen"
+      ["1", "6", _] -> "sixteen"
+      ["1", "7", _] -> "seventeen"
+      ["1", "8", _] -> "eighteen"
+      ["1", "9", _] -> "nineteen"
       [t, "0", _] -> tens(t) 
       [t, o, _] -> tens(t) <> " " <> one_to_ten(o)
     end
