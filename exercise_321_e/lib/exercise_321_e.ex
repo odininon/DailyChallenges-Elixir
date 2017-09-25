@@ -3,6 +3,9 @@ defmodule Exercise321E do
   Documentation for Exercise321E.
   """
 
+  @doc """
+  Gathers the local system time and prints it to the std_in.
+  """
   def speak_current_time do
     {{_, _, _}, {h, m, _}} = :calendar.local_time()
 
@@ -11,6 +14,14 @@ defmodule Exercise321E do
     |> IO.puts
   end
 
+  @doc """
+  Converts an hour to a string. Will prepend 0 if it does not have one.
+
+  ## Parameters
+
+     - hour: Integer that represents the hour.
+
+  """
   def hours(i) do 
     s = Integer.to_string(i)
     case String.split(s, "") do
